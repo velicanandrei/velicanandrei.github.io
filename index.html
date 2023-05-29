@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get your meal today</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0311544f4c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="wrap" id="wrap">
+            <div class="search">
+                <h2>Get your meal today</h2>
+                <p>Cook a meal based on what you have in the fridge, nothing easier!  <i class="fa-solid fa-utensils"></i></p>
+
+                <div class="search-box">
+                    <input type="text" class="search-items" placeholder="  Tell me what do you have in the fridge..." name="" id="input-search">
+                    <button type="submit" id="search-btn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+                <!-- Search results -->
+
+            <div class="meal-results">
+                <h2 class="title">Let's see what you can cook:</h2>
+                <div id="meal">
+                    <!-- <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="images/spaghetti-with-vegetablesbroccolitomatoespeppers.jpg" alt="spaghetti image">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Spaghetti with vegetables</h3>
+                            <a href="#" class="recipe-btn">Get meal recipe</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        
+        
+        <div class="meal-details">
+            <!-- close btn -->
+            <button type="button" class="btn close-recipe-btn" id="close-recipe-btn">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- meal content -->
+            <div class="meal-details-content">
+                <h2 class="recipe-title">Meal name</h2>
+                <p class="recipe-cat">Category Name</p>
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <div class="recipe-img">
+                    <img src="images/spaghetti-with-vegetablesbroccolitomatoespeppers.jpg" alt="">
+                </div>
+                <div class="recipe-link">
+                    <a href="#" target="_blank">Watch video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("images/various-vegetables-black-table-with-space-message.jpg");
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+:root {
+    --txt-color: #F8F6F4;
+    --btn-color: #FF0303;
+}
+
+
+/*  */
+
+
+.search-btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.meal-results h2 {
+    font-size: 1.5rem;
+}
+/*  */
+
+
+#container {
+    min-height: 100vh;
+}
+
+#wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.search-box {
+    margin: 2rem 0;
+
+}
+
+input {
+    height: 2.4rem;
+    width: 300px;
+    border-radius: 10px;
+    border-color: #FF0303;
+}
+
+.search-btn {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+    background-color: #FF0303;
+}
+
+.search-btn:hover {
+    background-color: var(--txt-color)
+}
+
+.meal-results {
+    margin-top: 5rem;
+}
+
+#meal {
+    margin: 2rem 0;
+}
+
+.meal-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px #F0EEED;
+    margin: 2rem 0;
+}
+
+.meal-img img {
+    width: 100%;
+    display: block;
+
+}
+
+.meal-name {
+    margin: 2rem ;
+}
+
+.meal-name a {
+    padding: 5px;
+}
+
+.meal-name h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+}
+
+
+.recipe-btn {
+    text-decoration: none;
+    color: var(--txt-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    display: block;
+    width:  175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    background-color: var(--btn-color);
+    transition: all 0.4s linear;
+}
+
+.recipe-btn:hover {
+    background-color: brown;
+}
+
+
+
+/* Meal details */
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--txt-color);
+    background-image: url("images/various-vegetables-black-table-with-space-message.jpg");
+    border-radius: 1rem;
+    width: 80%;
+    height: 90%;
+    display: none;
+    overflow-y: scroll;
+    padding: 2rem 0;
+}
+
+
+.meal-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+    background: var(--btn-color);
+    border-radius: 2rem;
+}
+
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+
+
+/* JS */
+
+.showRecipe {
+    display: block;
+}
+
+.meal-details-content {
+    margin: 2rem;
+}
+
+
+.close-recipe-btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 2rem;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.recipe-title {
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.recipe-cat {
+    font-weight: 600;
+    background-color: #FF0303;
+    color: var(--txt-color);
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+}
+
+
+.instructions {
+    padding: 1rem 0;
+}
+
+
+.recipe-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.recipe-link {
+    margin: 1.5rem 0;
+}
+
+.recipe-link a{
+    text-decoration: none;
+    color: var(--txt-color);
+    font-size: 1.3rem;
+    transition: all 0.4s linear;
+    background-color: #FF0303;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.recipe-link a:hover {
+    background-color: brown;
+}
+
+
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: var(--tenne-tawny);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+/* Media */
+
+@media screen and (min-width: 400px) {
+    .search-box {
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .recipe-btn {
+        max-width: fit-content;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px ) {
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
